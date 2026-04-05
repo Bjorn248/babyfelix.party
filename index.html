@@ -529,7 +529,7 @@
     // Max shift is 10% of viewport height (matches the 120% sizing above)
     const maxShift = window.innerHeight * 0.10;
     const shift = Math.min((scrolled / Math.max(maxScroll, 1)) * maxShift, maxShift);
-    pageBg.style.transform = 'translateY(' + shift + 'px)';
+    pageBg.style.transform = 'translateY(-' + shift + 'px)';
   }
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
