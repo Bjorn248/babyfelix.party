@@ -127,7 +127,7 @@
   /* ── Info grid ── */
   .info-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 16px;
     margin-bottom: 52px;
   }
@@ -136,7 +136,7 @@
     background: var(--card-bg);
     border: 1px solid var(--card-border);
     border-radius: 20px;
-    padding: 28px 24px;
+    padding: 16px 10px;
     text-align: center;
     backdrop-filter: blur(10px);
     transition: border-color 0.3s, transform 0.3s;
@@ -331,7 +331,7 @@
 
   <!-- Hero -->
   <section class="hero" id="hero-section">
-
+    
     <div class="launch-tag">Mission: Baby Felix</div>
 
     <div class="rocket-wrapper">
@@ -357,22 +357,22 @@
     <!-- Countdown in hero -->
     <div style="margin-bottom:36px;">
       <div style="font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:var(--text-muted); margin-bottom:14px;">T-minus</div>
-      <div style="display:flex; justify-content:center; gap:10px; flex-wrap:wrap;">
-        <div style="background:var(--card-bg); border:1px solid var(--card-border); border-radius:16px; padding:14px 20px; min-width:72px; backdrop-filter:blur(10px);">
-          <div id="cd-days" style="font-size:32px; font-weight:700; color:var(--accent-gold); line-height:1; font-family:'Space Grotesk',sans-serif;">--</div>
-          <div style="font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:var(--text-muted); margin-top:6px;">Days</div>
+      <div style="display:flex; justify-content:center; gap:6px; flex-wrap:nowrap;">
+        <div style="background:var(--card-bg); border:1px solid var(--card-border); border-radius:12px; padding:10px 12px; flex:1; max-width:80px; backdrop-filter:blur(10px);">
+          <div id="cd-days" style="font-size:clamp(18px,5vw,32px); font-weight:700; color:var(--accent-gold); line-height:1; font-family:'Space Grotesk',sans-serif;">--</div>
+          <div style="font-size:9px; letter-spacing:0.12em; text-transform:uppercase; color:var(--text-muted); margin-top:6px;">Days</div>
         </div>
-        <div style="background:var(--card-bg); border:1px solid var(--card-border); border-radius:16px; padding:14px 20px; min-width:72px; backdrop-filter:blur(10px);">
-          <div id="cd-hours" style="font-size:32px; font-weight:700; color:var(--accent-blue); line-height:1; font-family:'Space Grotesk',sans-serif;">--</div>
-          <div style="font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:var(--text-muted); margin-top:6px;">Hours</div>
+        <div style="background:var(--card-bg); border:1px solid var(--card-border); border-radius:12px; padding:10px 12px; flex:1; max-width:80px; backdrop-filter:blur(10px);">
+          <div id="cd-hours" style="font-size:clamp(18px,5vw,32px); font-weight:700; color:var(--accent-blue); line-height:1; font-family:'Space Grotesk',sans-serif;">--</div>
+          <div style="font-size:9px; letter-spacing:0.12em; text-transform:uppercase; color:var(--text-muted); margin-top:6px;">Hours</div>
         </div>
-        <div style="background:var(--card-bg); border:1px solid var(--card-border); border-radius:16px; padding:14px 20px; min-width:72px; backdrop-filter:blur(10px);">
-          <div id="cd-mins" style="font-size:32px; font-weight:700; color:var(--accent-pink); line-height:1; font-family:'Space Grotesk',sans-serif;">--</div>
-          <div style="font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:var(--text-muted); margin-top:6px;">Minutes</div>
+        <div style="background:var(--card-bg); border:1px solid var(--card-border); border-radius:12px; padding:10px 12px; flex:1; max-width:80px; backdrop-filter:blur(10px);">
+          <div id="cd-mins" style="font-size:clamp(18px,5vw,32px); font-weight:700; color:var(--accent-pink); line-height:1; font-family:'Space Grotesk',sans-serif;">--</div>
+          <div style="font-size:9px; letter-spacing:0.12em; text-transform:uppercase; color:var(--text-muted); margin-top:6px;">Mins</div>
         </div>
-        <div style="background:var(--card-bg); border:1px solid var(--card-border); border-radius:16px; padding:14px 20px; min-width:72px; backdrop-filter:blur(10px);">
-          <div id="cd-secs" style="font-size:32px; font-weight:700; color:var(--star-white); line-height:1; font-family:'Space Grotesk',sans-serif;">--</div>
-          <div style="font-size:10px; letter-spacing:0.14em; text-transform:uppercase; color:var(--text-muted); margin-top:6px;">Seconds</div>
+        <div style="background:var(--card-bg); border:1px solid var(--card-border); border-radius:12px; padding:10px 12px; flex:1; max-width:80px; backdrop-filter:blur(10px);">
+          <div id="cd-secs" style="font-size:clamp(18px,5vw,32px); font-weight:700; color:var(--star-white); line-height:1; font-family:'Space Grotesk',sans-serif;">--</div>
+          <div style="font-size:9px; letter-spacing:0.12em; text-transform:uppercase; color:var(--text-muted); margin-top:6px;">Secs</div>
         </div>
       </div>
       <div style="font-size:12px; color:var(--text-muted); margin-top:12px;">July 5, 2026 🚀</div>
@@ -451,7 +451,7 @@
       <span class="detail-icon">🎮</span>
       <div class="detail-text">
         <strong>Activities</strong>
-        Games, block decorating, and good music.
+        Games, block decorating, good music.
       </div>
     </div>
     <div class="detail-item">
@@ -517,7 +517,7 @@
   setInterval(updateCountdown, 1000);
 
   // Set images
-
+  
   document.getElementById('page-bg').src = ASTRO_IMG;
 
   // Parallax scroll (clamped — never shows edges)
@@ -529,7 +529,7 @@
     // Max shift is 10% of viewport height (matches the 120% sizing above)
     const maxShift = window.innerHeight * 0.10;
     const shift = Math.min((scrolled / Math.max(maxScroll, 1)) * maxShift, maxShift);
-    pageBg.style.transform = 'translateY(-' + shift + 'px)';
+    pageBg.style.transform = 'translateY(' + shift + 'px)';
   }
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
